@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:get_it/get_it.dart';
+
 void main() {
   setupLocator();
   runApp(MyApp());
@@ -75,7 +76,7 @@ class MyApp extends StatelessWidget {
                     color: Colors.teal.shade100,
                   ),
                 ),
-                FlatButton(
+                TextButton(
                   onPressed: () => _service.call(number),
                   child: Card(
                       margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
@@ -94,7 +95,7 @@ class MyApp extends StatelessWidget {
                         ),
                       )),
                 ),
-                FlatButton(
+                TextButton(
                   onPressed: () => _service.sendEmail(email),
                   child: Card(
                       margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
@@ -112,7 +113,7 @@ class MyApp extends StatelessWidget {
                         ),
                       )),
                 ),
-                FlatButton(
+                TextButton(
                   onPressed: () => _launchURL(),
                   child: Card(
                       margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
@@ -130,7 +131,7 @@ class MyApp extends StatelessWidget {
                         ),
                       )),
                 ),
-                FlatButton(
+                TextButton(
                   onPressed: () => _launchURL2(),
                   child: Card(
                       margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
